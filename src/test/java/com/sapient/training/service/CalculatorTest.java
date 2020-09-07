@@ -41,7 +41,7 @@ public class CalculatorTest {
 	@Test
 	public void testfailAddition() {
 		Calculator cal=new Calculator();
-		assertEquals("Addition failed",5.0,cal.addition(1.0, 3.0),0.01);
+		assertNotEquals("Addition failed",5.0,cal.addition(1.0, 3.0),0.01);
 	}
 
 	@Test
@@ -50,7 +50,7 @@ public class CalculatorTest {
 	}
 	@Test
 	public void testfailSubtraction() {
-		assertEquals("Subtraction failed",-1,new Calculator().subtraction(4,3));
+		assertNotEquals("Subtraction failed",-1,new Calculator().subtraction(4,3));
 	}
 
 }
